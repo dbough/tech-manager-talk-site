@@ -31,7 +31,7 @@ a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-r
 .dot { color: var(--amber); }
 
 /* Header: centered banner */
-.top { padding: 8px 0 28px; text-align: center; }
+.top { padding: 40px 0 32px; text-align: center; }
 .banner { display: inline-block; line-height: 0; }
 .banner img { display: block; width: clamp(240px, 62vw, 400px); height: auto; }
 
