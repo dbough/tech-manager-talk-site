@@ -13,7 +13,7 @@ contact_email: "dan@techmanagertalk.com"
 
 # Paste the YouTube video ID of the intro video here (the part after v= in the link).
 # Leave it empty to show a placeholder card instead.
-intro_video_id: "jNQXAC9IVRw"  # TEST VIDEO. Replace with your intro video ID, or set to "" for the placeholder.
+intro_video_id: ""
 
 exclude:
   - README.md
