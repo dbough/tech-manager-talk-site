@@ -1,0 +1,148 @@
+:root {
+  --navy: #1F2A44;
+  --navy-deep: #141B2E;
+  --amber: #F2A541;
+  --text: #F5F1E8;
+  --muted: #A9B4C8;
+  --line: rgba(169, 180, 200, 0.22);
+  --font-head: "DM Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Open Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  background: var(--navy-deep);
+  background-image: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a { color: var(--amber); text-underline-offset: 3px; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+
+.page { max-width: 760px; margin: 0 auto; padding: 24px 20px 56px; overflow-x: clip; }
+
+/* Header */
+.top { padding: 4px 0 28px; }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+.mark { font-family: var(--font-head); font-weight: 700; font-size: 20px; letter-spacing: 0.02em; }
+.mark .dot { display: inline-block; width: 6px; height: 6px; margin-left: 3px; border-radius: 50%; background: var(--amber); vertical-align: baseline; }
+.name { font-family: var(--font-head); font-weight: 700; font-size: 18px; }
+
+/* Labels */
+.label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero { padding-bottom: 8px; }
+.video-wrap { position: relative; margin-bottom: 36px; }
+.video-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -40px -30px;
+  background: radial-gradient(closest-side, rgba(242, 165, 65, 0.08), transparent 75%);
+  z-index: 0;
+  pointer-events: none;
+}
+.video {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--navy-deep);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+}
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.video.placeholder { display: grid; place-items: center; text-align: center; padding: 24px; }
+.ph-title { font-family: var(--font-head); font-weight: 700; font-size: 24px; line-height: 1.25; margin: 0 0 14px; }
+
+h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 5.2vw, 42px);
+  line-height: 1.15;
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(22px, 3.6vw, 28px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.bullets li { position: relative; padding-left: 22px; color: var(--text); }
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+/* Cards */
+.signup, .about {
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+.embed { max-width: 480px; }
+.embed iframe { width: 100%; max-width: 480px; height: 150px; display: block; }
+.reassure { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+
+.about p { margin: 0 0 16px; }
+.about p:last-child { margin-bottom: 0; }
+
+/* Links and buttons */
+.link {
+  color: var(--amber);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.arrow { display: inline-block; transition: transform 0.18s ease; }
+.link:hover .arrow { transform: translateX(4px); }
+
+/* Footer */
+.foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+.foot .links { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.small { margin: 16px 0 0; font-size: 13px; color: var(--muted); }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .signup, .about { padding: 22px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .arrow { transition: none; }
+  .link:hover .arrow { transform: none; }
+}

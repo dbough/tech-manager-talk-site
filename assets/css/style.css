@@ -1,10 +1,11 @@
 :root {
   --navy: #1F2A44;
-  --navy-deep: #141B2E;
+  --cream: #F8F4E9;
   --amber: #F2A541;
-  --text: #F5F1E8;
-  --muted: #A9B4C8;
-  --line: rgba(169, 180, 200, 0.22);
+  --text: var(--cream);
+  --muted: rgba(248, 244, 233, 0.68);
+  --line: rgba(248, 244, 233, 0.16);
+  --card: rgba(248, 244, 233, 0.04);
   --font-head: "DM Sans", "Avenir Next", "Segoe UI", sans-serif;
   --font-body: "Open Sans", "Segoe UI", system-ui, sans-serif;
 }
@@ -19,9 +20,7 @@ body {
   font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.65;
-  background: var(--navy-deep);
-  background-image: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-  background-attachment: fixed;
+  background: var(--navy);
   min-height: 100vh;
 }
 
@@ -31,11 +30,9 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--amber); outline-o
 .page { max-width: 760px; margin: 0 auto; padding: 24px 20px 56px; overflow-x: clip; }
 
 /* Header */
-.top { padding: 4px 0 28px; }
-.wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
-.mark { font-family: var(--font-head); font-weight: 700; font-size: 20px; letter-spacing: 0.02em; }
-.mark .dot { display: inline-block; width: 6px; height: 6px; margin-left: 3px; border-radius: 50%; background: var(--amber); vertical-align: baseline; }
-.name { font-family: var(--font-head); font-weight: 700; font-size: 18px; }
+.top { padding: 0 0 20px; }
+.brand { display: inline-block; line-height: 0; }
+.brand img { display: block; width: clamp(200px, 42vw, 290px); height: auto; }
 
 /* Labels */
 .label {
@@ -54,7 +51,7 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--amber); outline-o
   content: "";
   position: absolute;
   inset: -40px -30px;
-  background: radial-gradient(closest-side, rgba(242, 165, 65, 0.08), transparent 75%);
+  background: radial-gradient(closest-side, rgba(242, 165, 65, 0.07), transparent 75%);
   z-index: 0;
   pointer-events: none;
 }
@@ -65,8 +62,8 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--amber); outline-o
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--navy-deep);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  background: var(--card);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 .video iframe { width: 100%; height: 100%; border: 0; display: block; }
 .video.placeholder { display: grid; place-items: center; text-align: center; padding: 24px; }
@@ -108,8 +105,8 @@ h2 {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.025);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  background: var(--card);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
 }
 .embed { max-width: 480px; }
 .embed iframe { width: 100%; max-width: 480px; height: 150px; display: block; }
