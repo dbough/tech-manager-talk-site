@@ -12,7 +12,7 @@ layout: default
   <main>
     <section class="hero">
       <div class="video-wrap">
-        {% if site.intro_video_id != "" %}
+        {% if site.intro_video_id and site.intro_video_id != "" %}
         <div class="video">
           <iframe src="https://www.youtube-nocookie.com/embed/{{ site.intro_video_id }}" title="Tech Manager Talk video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
         </div>
@@ -43,7 +43,7 @@ layout: default
       <span aria-hidden="true">·</span>
       <a href="{{ site.coaching_url }}">techmanager.coach</a>
     </nav>
-    <p class="small">&copy; {{ site.time | date: "%Y" }} Tech Manager Talk &middot; By {% if site.linkedin_url != "" %}<a href="{{ site.linkedin_url }}" rel="noopener">Dan Bough</a>{% else %}Dan Bough{% endif %}</p>
+    <p class="small">&copy; {{ site.time | date: "%Y" }} Tech Manager Talk &middot; By {% if site.linkedin_url and site.linkedin_url != "" %}<a href="{{ site.linkedin_url }}" rel="noopener">Dan Bough</a>{% else %}Dan Bough{% endif %}</p>
   </footer>
 
 </div>
