@@ -31,12 +31,9 @@ layout: default
 
     <section class="signup" id="signup" aria-labelledby="signup-title">
       <h2 id="signup-title">Get the weekly newsletter<span class="dot">.</span></h2>
-      <form class="subscribe" action="{{ site.substack_url }}/api/v1/free?nojs=true" method="post" target="_blank" rel="noopener">
-        <label class="sr-only" for="sub-email">Email address</label>
-        <input id="sub-email" class="sub-input" type="email" name="email" placeholder="Type your email..." autocomplete="email" required>
-        <button class="sub-btn" type="submit">Subscribe</button>
-      </form>
-      <p class="sub-note">By subscribing you agree to <a href="https://substack.com/tos" rel="noopener">Substack's Terms of Use</a>, <a href="https://substack.com/privacy" rel="noopener">Privacy Policy</a>, and <a href="https://substack.com/ccpa#personal-data-collected" rel="noopener">Information collection notice</a>.</p>
+      <div class="embed">
+        <iframe src="{{ site.substack_url }}/embed" title="Sign up for the Tech Manager Talk email" width="480" height="150" style="border:0; background:transparent;" frameborder="0" scrolling="no"></iframe>
+      </div>
     </section>
   </main>
 
