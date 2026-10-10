@@ -7,7 +7,6 @@ layout: default
     <a class="logo" href="/" aria-label="Tech Manager Talk home">
       <img src="/assets/img/tmt-logo.png" width="128" height="128" alt="TMT">
     </a>
-    <img class="title" src="/assets/img/tmt-title.png" width="1000" height="112" alt="Tech Manager Talk">
   </header>
 
   <main>
@@ -27,32 +26,24 @@ layout: default
         </div>
         {% endif %}
       </div>
-
       <h1>A weekly conversation for tech managers about what matters to us.</h1>
-      <ul class="bullets">
-        <li>A weekly video on what matters to tech managers</li>
-        <li>The news as a starting point, plus the everyday stuff: communication, delegation, decisions</li>
-        <li>A place to talk it through, in the comments and by reply</li>
-      </ul>
     </section>
 
     <section class="signup" id="signup" aria-labelledby="signup-title">
-      <p class="label">This week</p>
-      <h2 id="signup-title">Get the weekly video and topics by email. Free.</h2>
+      <h2 id="signup-title">Get the weekly video by email. Free.</h2>
       <div class="embed">
         <iframe src="{{ site.substack_url }}/embed" title="Sign up for the Tech Manager Talk email" width="480" height="150" style="border:0; background:transparent;" frameborder="0" scrolling="no"></iframe>
       </div>
-      <p class="reassure">Free · weekly · unsubscribe anytime.</p>
     </section>
-
   </main>
 
   <footer class="foot">
-    <div class="links">
-      <a class="link" href="{{ site.youtube_channel }}">Watch on YouTube <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="link" href="{{ site.coaching_url }}">techmanager.coach <span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-    <p class="small">© {{ site.time | date: "%Y" }} Tech Manager Talk. By Dan Bough.</p>
+    <nav class="foot-links" aria-label="Elsewhere">
+      <a href="{{ site.youtube_channel }}">YouTube</a>
+      <span aria-hidden="true">·</span>
+      <a href="{{ site.coaching_url }}">techmanager.coach</a>
+    </nav>
+    <p class="small">&copy; {{ site.time | date: "%Y" }} Tech Manager Talk &middot; By Dan Bough</p>
   </footer>
 
 </div>

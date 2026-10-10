@@ -109,7 +109,7 @@ h2 {
 }
 
 /* Cards */
-.signup, .about {
+.signup {
   margin-top: 40px;
   padding: 28px;
   border: 1px solid var(--line);
@@ -121,8 +121,6 @@ h2 {
 .embed iframe { width: 100%; max-width: 480px; height: 150px; display: block; }
 .reassure { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
 
-.about p { margin: 0 0 16px; }
-.about p:last-child { margin-bottom: 0; }
 
 /* Links and buttons */
 .link {
@@ -148,7 +146,7 @@ h2 {
 
 @media (max-width: 520px) {
   body { font-size: 16px; }
-  .signup, .about { padding: 22px 18px; }
+  .signup { padding: 22px 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
