@@ -74,7 +74,7 @@ h2 {
 
 /* Footer */
 .foot { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; }
-.foot-logo { display: inline-flex; line-height: 0; margin-right: 10px; }
+.foot-logo { display: inline-flex; line-height: 0; }
 .foot-logo img { display: block; width: 44px; height: 44px; border-radius: 8px; }
 .foot-links { display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 15px; color: var(--muted); }
 .foot-links a { color: var(--cream); text-decoration: none; }
