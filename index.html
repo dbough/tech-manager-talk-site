@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<div class="page">
+
+  <header class="top">
+    <a class="wordmark" href="/" aria-label="Tech Manager Talk home">
+      <span class="mark">TMT<i class="dot" aria-hidden="true"></i></span>
+      <span class="name">Tech Manager Talk</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="video-wrap">
+        {% if site.intro_video_id != "" %}
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ site.intro_video_id }}" title="Tech Manager Talk video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </div>
+        {% else %}
+        <div class="video placeholder">
+          <div>
+            <p class="label">Coming soon</p>
+            <p class="ph-title">The first video is on its way.</p>
+            <a class="link" href="{{ site.youtube_channel }}">Watch on YouTube <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <h1>A weekly conversation for tech managers about what matters to us.</h1>
+      <ul class="bullets">
+        <li>A weekly video on what matters to tech managers</li>
+        <li>The news as a starting point, plus the everyday stuff: communication, delegation, decisions</li>
+        <li>A place to talk it through, in the comments and by reply</li>
+      </ul>
+    </section>
+
+    <section class="signup" id="signup" aria-labelledby="signup-title">
+      <p class="label">This week</p>
+      <h2 id="signup-title">Get the weekly video and topics by email. Free.</h2>
+      <div class="embed">
+        <iframe src="{{ site.substack_url }}/embed" title="Sign up for the Tech Manager Talk email" width="480" height="150" style="border:0; background:transparent;" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <p class="reassure">Free · weekly · unsubscribe anytime.</p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <p class="label">Why this exists</p>
+      <h2 id="about-title">About</h2>
+      <p>Being a tech manager can be lonely. You're in the middle, with people above and below you, and a lot lands on your desk before you've had a chance to make sense of it.</p>
+      <p>I'm Dan. I've spent 20+ years in tech, much of it managing software engineering teams. Along the way I wished I had a place to talk it through with people who got it. No one handed us a playbook when we became managers. We've had to write our own.</p>
+      <p>So that's what this is: a place to talk about the things that matter to tech managers. The things we struggle with, like communication, delegation, and making decisions. Sometimes we'll start with a story in the news, and sometimes with a question. Every week there's a video, and you can get it and the topics by email. It's free.</p>
+      <p>This only works if we all take part, so jump in. Share what's on your mind, what you're struggling with, and what's working for you. You can reply to any email, or write to me at <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.</p>
+      <p>I'm also a trained coach. If you'd ever like to work together one on one, you can find me at <a href="{{ site.coaching_url }}">techmanager.coach</a>.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="links">
+      <a class="link" href="{{ site.youtube_channel }}">Watch on YouTube <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="link" href="{{ site.coaching_url }}">techmanager.coach <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <p class="small">© {{ site.time | date: "%Y" }} Tech Manager Talk</p>
+  </footer>
+
+</div>

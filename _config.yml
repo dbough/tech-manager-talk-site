@@ -1,0 +1,18 @@
+title: Tech Manager Talk
+description: A weekly conversation for tech managers about what matters to us.
+url: "https://techmanagertalk.com"
+baseurl: ""
+
+# Update these when you have them
+youtube_channel: "https://www.youtube.com/@tech-manager-talk"
+substack_url: "https://techmanagertalk.substack.com"
+coaching_url: "https://techmanager.coach"
+contact_email: "dan@techmanagertalk.com"
+
+# Paste the YouTube video ID of the intro video here (the part after v= in the link).
+# Leave it empty to show a placeholder card instead.
+intro_video_id: ""
+
+exclude:
+  - README.md
+  - Gemfile.lock
