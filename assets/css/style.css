@@ -31,7 +31,7 @@ a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-r
 /* Header: centered banner */
 .top { padding: 8px 0 28px; text-align: center; }
 .banner { display: inline-block; line-height: 0; }
-.banner img { display: block; width: clamp(180px, 40vw, 280px); height: auto; }
+.banner img { display: block; width: clamp(240px, 62vw, 400px); height: auto; }
 
 /* Hero */
 .video-wrap { margin-bottom: 40px; }
