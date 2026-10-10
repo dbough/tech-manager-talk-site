@@ -78,6 +78,8 @@ h2 {
 .foot-links a { color: var(--cream); text-decoration: none; }
 .foot-links a:hover { color: var(--amber); }
 .small { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.small a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.small a:hover { color: var(--amber); }
 
 @media (max-width: 520px) {
   body { font-size: 16px; }

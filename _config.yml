@@ -7,6 +7,8 @@ baseurl: ""
 youtube_channel: "https://www.youtube.com/@tech-manager-talk"
 substack_url: "https://techmanagertalk.substack.com"
 coaching_url: "https://techmanager.coach"
+# Paste your LinkedIn profile URL here. Your name in the footer links to it.
+linkedin_url: ""
 contact_email: "dan@techmanagertalk.com"
 
 # Paste the YouTube video ID of the intro video here (the part after v= in the link).
